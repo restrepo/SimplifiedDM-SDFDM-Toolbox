@@ -104,7 +104,7 @@ Yd22           |(sqrt2*Md2)/v
 Yd23           |0 
 Yd31           |0 
 Yd32           |0 
-Yd33           |(sqrt2*MbEff(Q)*one(QCDok))/v 
+Yd33           |(sqrt2*Md3)/v 
 Ye11           |(sqrt2*Me1)/v 
 Ye12           |0 
 Ye13           |0 
@@ -118,11 +118,11 @@ Yu11           |(sqrt2*Mu1)/v
 Yu12           |0 
 Yu13           |0 
 Yu21           |0 
-Yu22           |(sqrt2*McEff(Q)*one(QCDok))/v 
+Yu22           |(sqrt2*Mu2)/v 
 Yu23           |0 
 Yu31           |0 
 Yu32           |0 
-Yu33           |(sqrt2*MtEff(Q)*one(QCDok))/v 
+Yu33           |(sqrt2*Mu3)/v 
 v0000          |-2*lam1*v 
 v0001          |-6*lam1*v 
 v0002          |-2*lam1*v 
