@@ -16,11 +16,12 @@ def run_feynrules_SDFDM(MDF = 110.,MN = 101.,lu = 0.1,ld = 0.1,v=246.2196,path='
              [ lu*v/np.sqrt(2.),  MDF,               0. ]])
 
     (Mchi,N)=np.linalg.eig(M)
-    
-    pd.Series({'MDF':MDF,'MN':MN,'ld':ld,'lu':lu,\
+
+    full_input=pd.Series({'MDF':MDF,'MN':MN,'ld':ld,'lu':lu,\
                'N11':N[0,0],'N12':N[0,1],'N13':N[0,2],\
                'N21':N[1,0],'N22':N[1,1],'N23':N[1,2],\
-               'N31':N[2,0],'N32':N[2,1],'N33':N[2,2]}).to_csv('mo.dat',sep='\t')
+               'N31':N[2,0],'N32':N[2,1],'N33':N[2,2]})
+    full_input.to_csv('mo.dat',sep='\t')
 
     #3. Run micromegas
     mo=commands.getoutput('%s mo.dat' %path)
@@ -34,5 +35,6 @@ def run_feynrules_SDFDM(MDF = 110.,MN = 101.,lu = 0.1,ld = 0.1,v=246.2196,path='
     o['proton_SD']=eval(mo.split('proton  SI')[1].split('SD')[1].split('[')[0])
     #o['neutron_SI']=eval(mo.split('proton  SI')[1].split('[')[0])
     #o['neutron_SD']=eval(mo.split('proton  SI')[1].split('SD')[1].split('[')[0])
+    o['Full_Input']=full_input
     o['sigmav']=eval(mo.split('annihilation cross section')[1].split('cm^3/s\n')[0])
     return o
