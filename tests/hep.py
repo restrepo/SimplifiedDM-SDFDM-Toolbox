@@ -218,6 +218,9 @@ class hep(model):
                             brch=brchm+' unknown'
                             
                         self.Br_names[brch]=self.Br[k][kd]
+        for k in self.Gamma:
+            if k>=min_pdg:
+                self.Br_names['Gamma_%s' %self.pdg.pdg_id[k]]=self.Gamma[k] 
 
         return SPCdecays.keys()
     
