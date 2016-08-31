@@ -3,7 +3,7 @@
 ! SARAH References: arXiv:0806.0538, 0909.2863, 1002.0840, 1207.0906, 1309.7223  
 ! (c) Florian Staub, 2013  
 ! ------------------------------------------------------------------------------  
-! File created at 16:12 on 26.7.2016   
+! File created at 15:18 on 30.8.2016   
 ! ----------------------------------------------------------------------  
  
  
@@ -42,7 +42,7 @@ Integer, Intent(inout) :: kont
 Integer :: i1,i2,i3,i4,j1,j2,j3,kontSave 
 Complex(dp) :: MFreC 
 Iname = Iname + 1 
-NameOfUnit(Iname) = 'TreeMassesSimplifiedDM/SDFDM'
+NameOfUnit(Iname) = 'TreeMassesSimplifiedDM/SDFDM/'
  
 kont = 0 
 Call CalculateVPVZ(g1,g2,v,ZZ,MVZ,MVZ2,TW,kont)
@@ -243,7 +243,7 @@ Integer, Intent(inout) :: kont
 Integer :: i1,i2,i3,i4,j1,j2,j3,kontSave 
 Complex(dp) :: MFreC 
 Iname = Iname + 1 
-NameOfUnit(Iname) = 'TreeMassesSimplifiedDM/SDFDM'
+NameOfUnit(Iname) = 'TreeMassesSimplifiedDM/SDFDM/'
  
 kont = 0 
 Call CalculateVPVZEffPot(g1,g2,v,ZZ,MVZ,MVZ2,TW,kont)
@@ -1807,7 +1807,7 @@ Logical, Intent(in) :: GenerationMixing
 Integer, Intent(inout) :: kont 
 Integer :: i1,i2,i3,i4,j1,j2,j3,kontSave 
 Iname = Iname + 1 
-NameOfUnit(Iname) = 'TreeMassesSimplifiedDM/SDFDM'
+NameOfUnit(Iname) = 'TreeMassesSimplifiedDM/SDFDM/'
  
 kont = 0 
 Call CalculateMFd(Yd,v,ZDL,ZDR,MFd,kont)
