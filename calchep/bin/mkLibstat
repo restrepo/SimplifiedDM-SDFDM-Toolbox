@@ -1,5 +1,5 @@
 : 
-  CALCHEP=/home/restrepo/prog/toolbox/toolbox/calchep 
+  CALCHEP=/home/sarah/SimplifiedDM-SDFDM-Toolbox/calchep 
 #-------------------- 
 
 if(test $# -ne 1) then
